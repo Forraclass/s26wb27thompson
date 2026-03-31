@@ -6,8 +6,9 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var quixoticFruitsRouter = require('./routes/quixoticFruit')
-var gridRouter = require('./routes/grid')
+var quixoticFruitsRouter = require('./routes/quixoticFruit');
+var gridRouter = require('./routes/grid');
+var pickRouter = require('./routes/pick');
 
 var app = express();
 
@@ -25,6 +26,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/quixotic', quixoticFruitsRouter);
 app.use('/grid', gridRouter);
+app.use('/pick', pickRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
